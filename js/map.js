@@ -1,0 +1,10 @@
+(function() {
+    const arr = [1, 2, 3, 4, 5];
+
+    const arr2 = arr.map(function(num) {
+        return num + 1;
+    });
+
+    console.log("Array 1: ", arr);
+    console.log("Array 2: ", arr2);
+})();
