@@ -1,5 +1,6 @@
-
 const btnMudaLayout = document.querySelector('#btnMudaLayout');
+
+btnMudaLayout.classList.remove('no-js');
 
 btnMudaLayout.addEventListener('click', mudaTexto);
 btnMudaLayout.addEventListener('click', mudaLayout);
@@ -12,13 +13,13 @@ function mudaTexto(e){
     //     btnMudaLayout.textContent = "Linhas";
     // }
     
-    //if ternario.
+    //if ternario
     
     btnMudaLayout.textContent = btnMudaLayout.textContent === "Linhas" ? "Blocos" : "Linhas"
 }
 
 function mudaLayout(){
     const mural = document.querySelector('.container.mural');
-
+    
     mural.classList.toggle('mural--linha');
 }
