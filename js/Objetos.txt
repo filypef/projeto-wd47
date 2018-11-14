@@ -1,0 +1,5 @@
+Como clonar um objeto
+    * Objetct.assign({}, objeto)
+    
+    
+    * var objeto2 = {...objeto} 
