@@ -2,3 +2,6 @@
 dist
 node_modules
 settings.json
+js/testeCores.js
+js/objetoQuiz.js
+js/descontrucaoObjeto.js
