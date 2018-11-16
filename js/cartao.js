@@ -1,78 +1,80 @@
-(function() {
-    "use strict";
+//ERRA UTILIZADO ANTES DO FORM NOVO CARTAO
 
-    var $ = document.querySelectorAll.bind(document);
+// (function() {
+//     "use strict";
 
-    // const btnRemove = $(".opcoesDoCartao-remove");
-    // const btnsCores = $('.opcoesDoCartao-radioTipo');
+//     var $ = document.querySelectorAll.bind(document);
 
-    //CONCEITO THROTTLE - PARA ESTUDAR
+//     // const btnRemove = $(".opcoesDoCartao-remove");
+//     // const btnsCores = $('.opcoesDoCartao-radioTipo');
 
-    //BUBBLNG
-    const cartoes = $(".cartao");
-    cartoes.forEach(function(cartao) {
+//     //CONCEITO THROTTLE - PARA ESTUDAR
 
-        addEventoRemoverCartao(cartao);
+//     //BUBBLNG
+//     const cartoes = $(".cartao");
+//     cartoes.forEach(function(cartao) {
 
-        cartao.addEventListener("focusin", function() {
-            cartao.classList.add("cartao--focado");
-        });
+//         addEventoRemoverCartao(cartao);
 
-        cartao.addEventListener("focusout", function() {
-            cartao.classList.remove("cartao--focado");
-        });
+//         cartao.addEventListener("focusin", function() {
+//             cartao.classList.add("cartao--focado");
+//         });
 
-        cartao.addEventListener("change", function(event) {
-            const elementoSelecionado = event.target;
-            const isRadioTipo = elementoSelecionado.classList.contains(
-                "opcoesDoCartao-radioTipo"
-            );
+//         cartao.addEventListener("focusout", function() {
+//             cartao.classList.remove("cartao--focado");
+//         });
 
-            if (isRadioTipo) {
-                this.style.backgroundColor = elementoSelecionado.value;
-            }
-        });
+//         cartao.addEventListener("change", function(event) {
+//             const elementoSelecionado = event.target;
+//             const isRadioTipo = elementoSelecionado.classList.contains(
+//                 "opcoesDoCartao-radioTipo"
+//             );
 
-        cartao.addEventListener("keydown", function(e) {
-            if (e.key === "Enter" || e.key === " ") {
-                e.target.click();
-            }
-        });
-    });
+//             if (isRadioTipo) {
+//                 this.style.backgroundColor = elementoSelecionado.value;
+//             }
+//         });
 
-    function addEventoRemoverCartao(cartao) {
-        cartao.addEventListener("click", function(e) {
-            if (e.target.classList.contains("opcoesDoCartao-remove")) {
-                this.classList.add("cartao--some");
+//         cartao.addEventListener("keydown", function(e) {
+//             if (e.key === "Enter" || e.key === " ") {
+//                 e.target.click();
+//             }
+//         });
+//     });
 
-                this.addEventListener("transitionend", function() {
-                    this.remove();
-                });
-            }
-        });
-    }
+//     function addEventoRemoverCartao(cartao) {
+//         cartao.addEventListener("click", function(e) {
+//             if (e.target.classList.contains("opcoesDoCartao-remove")) {
+//                 this.classList.add("cartao--some");
 
-    //SEM BUBBLNG
-    // for(let i = 0; i < btnsCores.length; i++){
-    //     btnsCores[i].addEventListener('click', function(){
-    //         const cartao = this.parentNode.parentNode;
-    //         cartao.style.backgroundColor = this.value
-    //     })
-    // }
+//                 this.addEventListener("transitionend", function() {
+//                     this.remove();
+//                 });
+//             }
+//         });
+//     }
 
-    // console.log(btnsCores);
+//     //SEM BUBBLNG
+//     // for(let i = 0; i < btnsCores.length; i++){
+//     //     btnsCores[i].addEventListener('click', function(){
+//     //         const cartao = this.parentNode.parentNode;
+//     //         cartao.style.backgroundColor = this.value
+//     //     })
+//     // }
 
-    //REMOVENDO CARTAO SEM BUBBLNG
-    // btnRemove.forEach(btn => {
-    //     btn.addEventListener("click", removeCartao);
-    // });
+//     // console.log(btnsCores);
 
-    // function removeCartao() {
-    //     const cartao = this.parentNode.parentNode;
-    //     cartao.classList.add("cartao--some");
+//     //REMOVENDO CARTAO SEM BUBBLNG
+//     // btnRemove.forEach(btn => {
+//     //     btn.addEventListener("click", removeCartao);
+//     // });
 
-    //     cartao.addEventListener("transitionend", function() {
-    //         cartao.remove();
-    //     });
-    // }
-})();
+//     // function removeCartao() {
+//     //     const cartao = this.parentNode.parentNode;
+//     //     cartao.classList.add("cartao--some");
+
+//     //     cartao.addEventListener("transitionend", function() {
+//     //         cartao.remove();
+//     //     });
+//     // }
+// })();
