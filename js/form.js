@@ -21,9 +21,7 @@
 
             form.insertBefore(msg, btnSubmit);
         } else {
-            numeroDoCartao++;
-            adicionaCartaoNoMural({conteudo: textarea.value});
-            checaCor();
+            cartao.adiciona({conteudo: textarea.value})
         }    
     });
 })();

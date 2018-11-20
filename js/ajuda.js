@@ -12,8 +12,7 @@
         // let msg = "";
 
         for (let i = 0; i < ajudas.length; i++) {
-            adicionaCartaoNoMural(ajudas[i]);
-            checaCor(ajudas[i]);
+            cartao.adiciona(ajudas[i]);
         }
 
         // const msgAlerta = document.createElement("div");
